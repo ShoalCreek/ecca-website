@@ -1,5 +1,5 @@
 export default function EventsPage() {
-  const upcomingEvents = [
+  const regularEvents = [
     {
       title: "Sunday Worship Service",
       date: "Every Sunday",
@@ -23,6 +23,24 @@ export default function EventsPage() {
     },
   ];
 
+  const specialEvents = [
+    {
+      title: "ECCA AGM and National Conference",
+      date: "Every April",
+      description: "Our Annual General Meeting and National Conference brings together all ECCA churches for fellowship, worship, reports, and planning for the year ahead.",
+    },
+    {
+      title: "ECCA Pastors and Elders National Conference",
+      date: "Every October",
+      description: "A special gathering for pastors and elders from across all regions. A time for training, encouragement, and spiritual growth for church leaders.",
+    },
+    {
+      title: "August Missions",
+      date: "Every August",
+      description: "Our annual missions month where we send teams to share the Gospel, plant churches, and serve communities in unreached areas.",
+    },
+  ];
+
   return (
     <>
       <section className="bg-olive-dark text-white py-16">
@@ -34,10 +52,31 @@ export default function EventsPage() {
 
       <section className="py-16 bg-warm-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-olive-dark mb-8">Regular Gatherings</h2>
+          {/* Special Annual Events */}
+          <h2 className="text-2xl font-bold text-olive-dark mb-8">Special Annual Events</h2>
+          <div className="space-y-6 mb-16">
+            {specialEvents.map((event) => (
+              <div
+                key={event.title}
+                className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+              >
+                <div className="flex flex-col md:flex-row">
+                  <div className="bg-gold-dark text-white p-6 md:w-48 flex flex-col items-center justify-center text-center">
+                    <p className="text-xl font-bold">{event.date}</p>
+                  </div>
+                  <div className="p-6 flex-1">
+                    <h3 className="text-lg font-bold text-olive-dark mb-2">{event.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{event.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
 
+          {/* Regular Gatherings */}
+          <h2 className="text-2xl font-bold text-olive-dark mb-8">Regular Gatherings</h2>
           <div className="space-y-6 mb-12">
-            {upcomingEvents.map((event) => (
+            {regularEvents.map((event) => (
               <div
                 key={event.title}
                 className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
@@ -58,11 +97,9 @@ export default function EventsPage() {
           </div>
 
           <div className="bg-cream rounded-xl p-8 text-center border border-gold/30">
-            <h2 className="text-xl font-bold text-olive-dark mb-3">Special Events</h2>
+            <h2 className="text-xl font-bold text-olive-dark mb-3">Want to Know More?</h2>
             <p className="text-gray-700 mb-4">
-              ECCA holds special events throughout the year, including conferences, crusades, and regional
-              gatherings. Contact your local church or our central office for more information about
-              upcoming special events.
+              Contact your local church or our central office for more details about upcoming events.
             </p>
             <a
               href="/contact"

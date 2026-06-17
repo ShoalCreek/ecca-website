@@ -23,6 +23,31 @@ export default function GivePage() {
             </p>
           </div>
 
+          {/* Bank Details */}
+          <div className="bg-forest text-white rounded-xl p-8 md:p-12 mb-8">
+            <h2 className="text-2xl font-bold mb-6 text-center">How to Give</h2>
+            <div className="bg-forest-dark rounded-xl p-6 max-w-md mx-auto">
+              <h3 className="text-lg font-bold text-gold-light mb-4">ECCA Head Office National Account</h3>
+              <div className="space-y-3 text-green-100">
+                <div className="flex justify-between border-b border-green-800 pb-2">
+                  <span className="font-medium text-white">Bank:</span>
+                  <span>Equity Bank</span>
+                </div>
+                <div className="flex justify-between border-b border-green-800 pb-2">
+                  <span className="font-medium text-white">Branch:</span>
+                  <span>Ruai</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="font-medium text-white">Account No.:</span>
+                  <span className="text-gold-light font-bold">Coming Soon</span>
+                </div>
+              </div>
+            </div>
+            <p className="text-center text-green-200 text-sm mt-4">
+              For questions about giving, contact us at +254 728 587 089
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {[
               {
@@ -52,22 +77,16 @@ export default function GivePage() {
             ))}
           </div>
 
-          <div className="bg-forest text-white rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-2xl font-bold mb-4">How to Give</h2>
-            <p className="text-green-100 mb-6 max-w-2xl mx-auto">
-              To make a donation or learn about ways to give, please contact our central office.
-              We will guide you through the process and make sure your gift goes where it is needed most.
+          <div className="bg-cream rounded-xl p-8 text-center border border-gold/30">
+            <h2 className="text-xl font-bold text-olive-dark mb-3">Other Ways to Give</h2>
+            <p className="text-gray-700 mb-4">
+              You can also give through your local ECCA church or contact our central office
+              for more information about how to support the work of ECCA.
             </p>
-            <div className="space-y-2 text-green-100">
-              <p><strong className="text-white">Phone:</strong> +254 728 587 089 / +254 723 822 926</p>
-              <p><strong className="text-white">Email:</strong> eccacentraloffice@gmail.com</p>
+            <div className="space-y-1 text-gray-600 text-sm">
+              <p><strong>Phone:</strong> +254 728 587 089 / +254 723 822 926</p>
+              <p><strong>Email:</strong> eccacentraloffice@gmail.com</p>
             </div>
-            <a
-              href="/contact"
-              className="inline-block mt-6 bg-gold hover:bg-gold-dark text-white font-bold py-3 px-8 rounded-lg transition-colors"
-            >
-              Contact Us to Give
-            </a>
           </div>
         </div>
       </section>
