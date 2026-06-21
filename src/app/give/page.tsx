@@ -39,7 +39,7 @@ export default function GivePage() {
                 </div>
                 <div className="flex justify-between">
                   <span className="font-medium text-white">Account No.:</span>
-                  <span className="text-gold-light font-bold">Coming Soon</span>
+                  <span className="text-gold-light font-bold">1440160817561</span>
                 </div>
               </div>
             </div>
